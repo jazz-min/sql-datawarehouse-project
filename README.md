@@ -1,6 +1,7 @@
-# SQL Data Warehouse Project
+# SQL Datawarehouse Project
+
 A modern **PostgreSQL-based data warehouse** implemented using the **Medallion Architecture** (Bronze → Silver → Gold). This portfolio project showcases robust data modeling, end-to-end ETL pipelines, quality checks, and analytics-ready transformations — all containerized and version-controlled for reproducibility.
----
+
 ## Overview
 This project simulates a real-world retail or CRM data warehouse, built entirely in PostgreSQL. It demonstrates a scalable and modular approach to managing structured data pipelines using:
 
@@ -108,6 +109,7 @@ PGADMIN_DEFAULT_PASSWORD=admin123
 ```bash
 docker-compose up -d
 ```
+
 4. **Initialize schemas and load Bronze data:**
 ```bash
 docker exec -i postgres_db psql -U admin -d postgres < scripts/init_database.sql
@@ -119,7 +121,7 @@ docker exec -i postgres_db psql -U admin -d DataWarehouse < scripts/bronze/load_
 docker exec -i postgres_db psql -U admin -d DataWarehouse < scripts/silver/ddl_silver.sql
 docker exec -i postgres_db psql -U admin -d DataWarehouse < scripts/silver/load_silver_crm_info.sql
 ```
-# Repeat for other Silver layer scripts
+Repeat for other Silver layer scripts
 
 6. **Apply  Gold transformations:**
 ```bash
@@ -131,7 +133,9 @@ docker exec -i postgres_db psql -U admin -d DataWarehouse < scripts/gold/ddl_gol
 docker exec -i postgres_db psql -U admin -d DataWarehouse < tests/quality_checks_silver/qc_silver_crm_cust_info.sql
 docker exec -i postgres_db psql -U admin -d DataWarehouse < tests/quality_checks_gold/qc_gold.sql
 ```
-# Repeat for other Silver layer scripts
+Repeat for other Silver layer scripts
+
+
 ---
 ## 📊 Medallion Architecture Overview
 
@@ -187,7 +191,7 @@ Alternatively, use the pgAdmin UI via http://localhost:8081.
 
 ## License
 
-MIT license
+![MIT License](LICENSE)
 
 ## 🛠️ Tech Stack & Tools
 
