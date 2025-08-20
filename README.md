@@ -160,7 +160,7 @@ Alternatively, use the pgAdmin UI via http://localhost:8081.
 
 ### 🧭 Data Flow Diagram
 
-- 📎 ![Data Flow Diagram](docs/data_flow_diagram_sql_dw.png)
+- 📎 ![Data Flow Diagram](docs/data_flow_diagram_sql_dw.drawio.png)
 - ✏️ Editable source: [`docs/data_flow_diagram_sql_dw.drawio`](docs/data_flow_diagram_sql_dw.drawio)
 
 
